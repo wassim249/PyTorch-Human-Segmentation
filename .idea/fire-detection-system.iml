@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/data" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_15-50-07_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_15-51-23_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_15-56-36_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_15-59-24_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_16-02-54_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_16-30-46_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_20-01-45_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/runs/Sep06_20-04-04_LAPTOP-P1DJ0NQP" />
+      <excludeFolder url="file://$MODULE_DIR$/saved/images" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+  <component name="PyDocumentationSettings">
+    <option name="renderExternalDocumentation" value="true" />
+  </component>
+</module>

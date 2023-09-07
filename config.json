@@ -1,0 +1,35 @@
+{
+  "name": "HumanSeg",
+  "n_gpu": 1,
+  "arch": {
+    "type": "HumanSegmentation",
+    "args": {
+
+    }
+  },
+  "data_loader": {
+    "type": "HumanSegDataLoader",
+    "args":{
+      "data_dir": "data",
+      "image_size": 128,
+      "batch_size": 16,
+      "shuffle": true,
+      "validation_split": 0.2  ,
+      "num_workers": 4
+    }
+  },
+  "optimizer": {
+    "type": "Adam",
+    "args":{
+      "lr": 0.001,
+      "weight_decay": 0,
+      "amsgrad": true
+    }
+  },
+  "trainer": {
+    "epochs": 100,
+    "save_dir": "saved/",
+    "tensorboard": false,
+    "checkpoint_path": ""
+  }
+}
