@@ -2,7 +2,7 @@
 
 This is a PyTorch-based project for human segmentation in images. Human segmentation is the task of identifying and segmenting humans in images, separating them from the background. This repository provides a template and guidelines for building your own human segmentation project using PyTorch.
 
-![Example Segmentation](example_segmentation.png)
+![Example Segmentation](./assets/example_segmentation.png)
 
 ## Table of Contents
 
