@@ -33,13 +33,13 @@ def main(args):
     optimizer = torch.optim.Adam(model.parameters(), lr=args.learning_rate,
                                  weight_decay=args.weight_decay, amsgrad=args.ams_grad)
     trainer = Trainer(
-        optimizer,
-        DEVICE,
-        model,
-        checkpoint_path=None,
-        tqdm=True)
+        device=DEVICE,
+        train_loader=train_loader,
+        test_loader=val_loader,
+        optimizer=optimizer,
+        checkpoint_path=None,)
 
-    trainer.train(train_loader, val_loader, epochs=args.epochs
+    trainer.train(epochs=args.epochs
                   , save_path=args.save_dir,
                   tensorboard=args.tensorboard)
 
