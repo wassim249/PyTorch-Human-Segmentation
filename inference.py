@@ -14,7 +14,7 @@ DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 def main(args):
     """
     Main function.
-    Test the model on the validation set with the first batch of images.
+    Test the model on the validation set with the first batch of assets.
     :param args:
     :return:
     """
@@ -35,12 +35,15 @@ def main(args):
     images = next(iter(val_loader))[0]
     logits_mask = trainer.predict(images)
 
+    print(f"Saving assets to {args.save_dir}/assets")
+    print(f"Total assets: {logits_mask.shape[0]}")
     for idx in range(logits_mask.shape[0]):
         pred_mask = torch.sigmoid(logits_mask[idx])
         pred_mask = ((pred_mask > 0.5) * 1.0).squeeze(0).squeeze(0)
-        save_tensor_image(pred_mask, f'{args.save_dir}/images/mask_{idx}.png')
+        save_tensor_image(pred_mask, f'{args.save_dir}/assets/mask_{idx}.png')
         img = images[idx].squeeze(0).permute(1, 2, 0)
-        save_tensor_image(img, f'{args.save_dir}/images/img_{idx}.png')
+        save_tensor_image(img, f'{args.save_dir}/assets/img_{idx}.png')
+        print(f'*** Saved image {idx} to {args.save_dir}/assets')
 
 if __name__ == '__main__':
     args = Config('./config.json').args
